@@ -1,0 +1,32 @@
+{
+  "name": "package-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo electron .",
+    "package": "sudo npx electron-builder",
+    "delete": "sudo rm -rf ./dist && sudo rm -rf main-window.jsc",
+    "run:compiled": "./dist/linux-unpacked/package-test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4"
+  },
+  "dependencies": {
+    "bytenode": "^1.1.1"
+  },
+  "build": {
+    "asar": false,
+    "productName": "React Electron App",
+    "appId": "com.reactbits.reactelectron",
+    "electronVersion": "5.0.6",
+    "extraResources": [
+      "/build/**/*"
+    ]
+  }
+}
